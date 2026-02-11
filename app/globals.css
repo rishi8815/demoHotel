@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --color-gold-50: #fdfaf3;
+  --color-gold-100: #f9f1df;
+  --color-gold-200: #f0deba;
+  --color-gold-300: #e3c48d;
+  --color-gold-400: #d4a55f;
+  --color-gold-500: #c5893d;
+  --color-gold-600: #ab6d2f;
+
+  --color-azure-900: #0a192f;
+  --color-azure-950: #020c1b;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: var(--color-azure-950);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-azure-950);
+    --foreground: #ffffff;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-400);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-500);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
